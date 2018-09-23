@@ -21,6 +21,7 @@ var pathsToCache = [
 ];
 
 self.addEventListener('install', event => {
+  //perform install
   event.waitUntil(caches.open(cacheName).then(function (cache) {
     return cache.addAll(pathsToCache);
   }));

@@ -10,10 +10,9 @@ document.addEventListener("DOMContentLoaded", event => {
   fetchNeighborhoods();
   fetchCuisines();
   if ("serviceWorker" in navigator) {
-    window.addEventListener('load', function() {
+    window.addEventListener("load", function() {
       navigator.serviceWorker.register("/sw.js", { scope: "/" });
-  });
-    
+    });
   }
 });
 
@@ -177,6 +176,7 @@ createRestaurantHTML = restaurant => {
   const image = document.createElement("img");
   image.className = "restaurant-img";
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.name + "Restaurant";
   li.append(image);
 
   const name = document.createElement("h1");
