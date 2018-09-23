@@ -121,6 +121,7 @@ nav h1 a {
   color: #01447e;
   text-decoration: underline;
 }
+
 /* ====================== Map ====================== */
 #map {
   height: 400px;
@@ -316,4 +317,37 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #666;
+}
+
+#maincontent #map-container {
+  height: 400px;
+  width: 100%;
+  background-color: #ccc;
+}
+#maincontent-top > #map-container,
+#maincontent-top > #map-container > #map {
+  height: 200px;
+}
+.inside #map-container {
+  width: 100%;
+}
+@media (min-width: 700px) {
+  #maincontent-top > #map-container,
+  #maincontent-top > #map-container > #map {
+    height: 660px;
+  }
+}
+
+#maincontent-top {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  #maincontent-top {
+    flex-direction: row-reverse;
+  }
+}
+
+#breadcrumb-nav {
+  text-align: left;
 }
